@@ -62,11 +62,17 @@ primary_branch = main
 managed_services = sonar
 install_script = tools/install.sh
 
-[update_manager moonraker-telegram-bot]
+[update_manager mobileraker]
 type = git_repo
-path = ~/moonraker-telegram-bot
-origin = https://github.com/nlef/moonraker-telegram-bot.git
-env = ~/moonraker-telegram-bot-env/bin/python
-requirements = scripts/requirements.txt
-install_script = scripts/install.sh
+path = /home/pi/mobileraker_companion
+origin = https://github.com/Clon1998/mobileraker_companion.git
+primary_branch = main
+managed_services = mobileraker
+env = /home/pi/mobileraker-env/bin/python
+requirements = scripts/mobileraker-requirements.txt
+install_script = scripts/install-mobileraker-companion.sh
+
+[spoolman]
+server = http://10.1.5.151:7912
+sync_rate = 5
 
